@@ -1,0 +1,55 @@
+﻿一.
+1.C
+2.D
+3.C
+4.A
+5.B
+6.A
+7.B C D
+8.C
+9.A
+10.B
+11.A
+12.ABC
+13.B
+14.D
+15.C
+
+
+
+二.
+1.DNS（Domain Name System，域名系统），因特网上作为域名和IP地址相互映射的一个分布式数据库，能够使用户更方便的访问互联网，而不用去记住能够被机器直接读取的IP数串，通过主机名，最终得到该主机名对应的IP地址的过程叫做域名解析（或主机名解析）
+
+
+2.URL：Uniformed  Resource  Location （统一资源定位 ，互联网上的绝对定位）
+URI：Uniformed  Resource  Identifier（统一资源标识 ，目标机器上相对某个文件夹的相对路径）
+eg：http://localhost:80/index.html
+个人电脑（http://localhost:80/index.html）   本地DNS、网络DNS    http://127.0.0.1:80/index.html      返回给电脑，电脑通过IP地址找到服务器，通过端口找到服务器上的服务软件，如apache，apache通过URI读取内容，再将读取到的页面返回给浏览器进行解析，服务器端解析（apache读取不了php代码，交给php引擎读取并解析成html返回给apache）、数据库
+
+3.文件包含两种格式：
+	（1）：向上包含
+	（2）：向下包含
+	区别：向上包含是索要，在当前脚本要用某个代码之前包含别的文件，使用被包含文件中的内容，向下包含是给予，在脚本写完之后包含别的文件，自己有内容可以给别的文件使用
+
+
+4.echo和print都可以输出，不同的是echo不是函数，没有返回值，而print是一个函数有返回值，echo输出更快，而print_r用于打印变量的相关信息，通常在调试中使用，print是打印字符串，print_r 则是打印复合类型  如数组 对象；
+
+
+5.	$time=strtotime("2017-12-22");
+	$time1=strtotime("2018-02-15");
+	$time2=($time1-$time)/60/60/24;
+	echo $time2;
+
+6.header ( "Location: http://www.example.com/aaa.php" );
+
+
+7.mysqli_fetch_row($res)返回结果集的一条数据，返回格式为一个索引数组。mysqli_fetch_array($res)默认取一条数据，返回格式为一个索引数组和一个关联数组；
+	区别：mysqli_fetch_row()返回的数组是只包含值，以数组下标来读取数据，mysqli_fetch_array()返回的值既包含值，也包含键值
+
+
+8. 双引号里面的字段会经过编译器解释，然后再当作HTML代码输出。单引号里面的不进行解释，直接输出。
+
+9.@ 表示忽略出错信息;mysql_connect()发生错误时会报错，而@mysql_connect()则忽略报错信息
+
+
+10.答案为5；   先计算++，再计算&&,满足条件为真。再输出$num+=1;
